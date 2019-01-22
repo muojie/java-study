@@ -19,10 +19,11 @@ repositories {
 }
 
 tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
+    options.encoding = "UTF-8"
 }
 
 
 dependencies {
+    compile files('java-agent/build/libs/java-agent-1.0-SNAPSHOT.jar')
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
